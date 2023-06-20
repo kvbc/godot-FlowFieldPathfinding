@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="FlowFieldPathfinding" inherits="Reference" version="3.4">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="GetHeight" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="GetNextAgentPosition" qualifiers="const">
+			<return type="Variant" />
+			<argument index="0" name="id" type="int" />
+			<description>
+				returns either null or [Vector2]
+			</description>
+		</method>
+		<method name="GetTargetPosition" qualifiers="const">
+			<return type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="GetTileDirection" qualifiers="const">
+			<return type="int" enum="FlowFieldPathfinding.Dir" />
+			<argument index="0" name="tile_pos" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="GetTileDistance" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="tile_pos" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="GetWidth" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="Init">
+			<return type="void" />
+			<argument index="0" name="tile_positions" type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="IsTileOccupied" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="tile_pos" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="IsTileWall" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="tile_pos" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="RegisterAgent">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="RemoveAgent">
+			<return type="void" />
+			<argument index="0" name="id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="Update">
+			<return type="void" />
+			<argument index="0" name="target_position" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="UpdateAgent">
+			<return type="void" />
+			<argument index="0" name="id" type="int" />
+			<argument index="1" name="x" type="int" />
+			<argument index="2" name="y" type="int" />
+			<argument index="3" name="width" type="int" />
+			<argument index="4" name="height" type="int" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<constants>
+		<constant name="FFP_NO_AGENT" value="-1">
+		</constant>
+		<constant name="NONE" value="0" enum="Dir">
+		</constant>
+		<constant name="LEFT" value="1" enum="Dir">
+		</constant>
+		<constant name="RIGHT" value="2" enum="Dir">
+		</constant>
+		<constant name="UP" value="3" enum="Dir">
+		</constant>
+		<constant name="DOWN" value="4" enum="Dir">
+		</constant>
+		<constant name="TOPLEFT" value="5" enum="Dir">
+		</constant>
+		<constant name="TOPRIGHT" value="6" enum="Dir">
+		</constant>
+		<constant name="BOTLEFT" value="7" enum="Dir">
+		</constant>
+		<constant name="BOTRIGHT" value="8" enum="Dir">
+		</constant>
+	</constants>
+</class>
